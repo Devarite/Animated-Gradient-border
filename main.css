@@ -1,12 +1,20 @@
 body {
     padding: 2px;
     background: #FC466B;
-    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
-    background: linear-gradient(to right, #3F5EFB, #FC466B);
+    background: -webkit-animation: rainbow 1s ease infinite;-z-animation: rainbow 1s ease infinite;-o-animation: rainbow 1s ease infinite;animation: rainbow 1s ease infinite;
+    
 }
 
-
 #app-mount {
-    width: calc(100% - 4px); /* wow that was easy */
+    width: calc(100% - 4px);
     height: calc(100% - 4px);
+}
+
+@keyframes rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
